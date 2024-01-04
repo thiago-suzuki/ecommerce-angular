@@ -10,5 +10,9 @@ export const appRoutes: Route[] = [
     {
         path: 'products',
         loadComponent: () => import('@ecommerce-angular/products').then(c => c.ProductsComponent)
+    },
+    {
+        path: 'orders',
+        loadComponent: () => import('@ecommerce-angular/orders').then(c => c.OrdersComponent)
     }
 ];
