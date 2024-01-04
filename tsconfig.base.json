@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@ecommerce-angular/orders": ["modules/orders/src/index.ts"],
-      "@ecommerce-angular/products": ["modules/products/src/index.ts"]
+      "@ecommerce-angular/products": ["modules/products/src/index.ts"],
+      "@ecommerce-angular/shared-ui": ["modules/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
