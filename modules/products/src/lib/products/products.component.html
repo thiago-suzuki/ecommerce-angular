@@ -1,2 +1,5 @@
-<p>products works!</p>
-<ecommerce-angular-shared-ui></ecommerce-angular-shared-ui>
+<input type="search" name="search" [formControl]="control" />
+
+<ul>
+    <li *ngFor="let product of products$ | async">{{ product.name }}</li>
+</ul>
