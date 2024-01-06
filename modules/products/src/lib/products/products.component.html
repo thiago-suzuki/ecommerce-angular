@@ -1,5 +1,10 @@
 <input type="search" name="search" [formControl]="control" />
+<button (click)="send(control.value)">Enviar</button>
 
-<ul>
-    <li *ngFor="let product of products$ | async">{{ product.name }}</li>
-</ul>
+<!-- @for(product of products$ | async; track product.name) {
+    <ul>
+        <li>{{ product.name }}</li>
+    </ul>
+} @empty {
+    <p>Nenhum resultado encontrado.</p>
+} -->

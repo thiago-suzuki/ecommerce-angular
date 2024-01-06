@@ -12,17 +12,21 @@ import { Product } from '../models/product-search';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
   control = new FormControl('', {nonNullable: true})
   products$?: Observable<Product[]>
 
-  constructor(private productSearchService: ProductSearchService) {}
+  // constructor(private productSearchService: ProductSearchService) {}
 
-  ngOnInit() {
-    this.products$ = this.control.valueChanges.pipe(
-      filter(text => text.length > 1),
-      debounceTime(400),
-      switchMap(text => this.productSearchService.searchByTerm(text))
-    );
+  // ngOnInit() {
+  //   this.products$ = this.control.valueChanges.pipe(
+  //     filter(text => text.length > 1),
+  //     debounceTime(400),
+  //     switchMap(text => this.productSearchService.searchByTerm(text))
+  //   );
+  // }
+
+  send(valor: string) : void {
+    console.log(valor);
   }
 }
